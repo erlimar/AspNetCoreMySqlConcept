@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FornecedorSimplificadoViewModel>
+@{
+    ViewData["Title"] = "Fornecedor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Fornecedores</h1>
+    <a asp-action="Novo">Novo Fornecedor</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fornecedor in Model)
+            {
+                <tr>
+                    <td>@fornecedor.Codigo</td>
+                    <td>@fornecedor.Nome</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

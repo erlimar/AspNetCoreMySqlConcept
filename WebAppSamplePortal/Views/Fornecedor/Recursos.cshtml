@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FornecedorRecursoSimplificadoViewModel>
+@{
+    ViewData["Title"] = "Recursos do Fornecedor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Recursos do Fornecedor</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Data Recurso</th>
+                <th>Data Jultamento</th>
+                <th>Pedido</th>
+                <th>Julgamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recurso in Model)
+            {
+                <tr>
+                    <td>@recurso.DataHoraRecurso</td>
+                    <td>@recurso.DataHoraJulgamento</td>
+                    <td>@recurso.Pedido</td>
+                    <td>@recurso.Julgamento</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
